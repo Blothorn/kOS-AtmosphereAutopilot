@@ -353,9 +353,9 @@ namespace kOS.AddOns.AtmosphereAutopilotAddon
                     {
                         ccAP.height_mode = CruiseController.HeightMode.VerticalSpeed;
                         if (float.IsNaN(VertSpeedSetPoint))
-                            ccAP.desired_vertspeed.Value = 0f;
+                            ccAP.desired_vertsetpoint.Value = 0f;
                         else
-                            ccAP.desired_vertspeed.Value = VertSpeedSetPoint;
+                            ccAP.desired_vertsetpoint.Value = VertSpeedSetPoint;
                     }
                     ccAP.vertical_control = true;
                     ccAP.pseudo_flc = PseudoFLC;
@@ -408,7 +408,7 @@ namespace kOS.AddOns.AtmosphereAutopilotAddon
                 else
                 {
                     ccAP.height_mode = CruiseController.HeightMode.VerticalSpeed;
-                    ccAP.desired_vertspeed.Value = 0f;
+                    ccAP.desired_vertsetpoint.Value = 0f;
                 }
             }
         }
@@ -418,7 +418,7 @@ namespace kOS.AddOns.AtmosphereAutopilotAddon
             if (ccAP != null)
             {
                 ccAP.height_mode = CruiseController.HeightMode.VerticalSpeed;
-                ccAP.desired_vertspeed.Value = VertSpeedSetPoint;
+                ccAP.desired_vertsetpoint.Value = VertSpeedSetPoint;
             }
         }
         private void SetFLCMargin(ScalarValue value)
